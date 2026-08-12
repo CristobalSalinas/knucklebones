@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:knucklebones/widgets/dice_box.dart';
+import 'package:knucklebones/widgets/dice_board.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,8 +7,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: DiceBox(value: 6)
+      body: SafeArea(
+        child: Center(
+          child: DiceBoard(
+            board: [
+              [1, 2, 3],
+              [4, 5, 6],
+              [1, 2, 3],
+            ],
+          ),
+        )
       ),
     );
   }
