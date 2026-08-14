@@ -52,9 +52,15 @@ class DiceBoard extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        if (totalsPosition == TotalsPosition.top) _buildColumnTotals(),
+        if (totalsPosition == TotalsPosition.top) ...[
+          _buildColumnTotals(),
+          const SizedBox(height: 15),
+        ],
         boardWidget,
-        if (totalsPosition == TotalsPosition.bottom) _buildColumnTotals(),
+        if (totalsPosition == TotalsPosition.bottom) ...[
+          const SizedBox(height: 15),
+          _buildColumnTotals(),
+        ],
       ],
     );
   }
