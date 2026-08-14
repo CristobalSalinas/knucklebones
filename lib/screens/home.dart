@@ -8,15 +8,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: DiceBoard(
-            board: [
-              [1, 2, 3],
-              [4, 5, 6],
-              [1, 2, 3],
-            ],
-          ),
-        )
+        child: DiceBoard(
+          board: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [1, 2, 3],
+          ],
+        ),
       ),
     );
   }
